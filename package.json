@@ -1,0 +1,12 @@
+{
+  "name": "NGFireTest",
+  "version": "1.0.0",
+  "description": "pluralsight test",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "me",
+  "license": "ISC"
+}
