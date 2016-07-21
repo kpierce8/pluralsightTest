@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title>Expense tracker kbp</title>
@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="container">
     
-
+<ng-view></ng-view>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
     <!-- Firebase -->
@@ -17,5 +17,7 @@
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
     <script src="/app.js"></script>
+     <script src="/home/home.js"></script>
+      <script src="/fbUrl.js"></script>
 </body>
 </html>
