@@ -6,7 +6,16 @@ app.config(function($routeProvider) {
             template: '<home></home>'
         })
          .when('/login', {
-            template: '<login></login>'
+            template: '<login current-auth="$resolve.myAuth"></login>',
+            resolve: {
+                myAuth: function(auth) {
+                    return auth.$waitForAuth();
+                }
+            }
+        })
+        .when('/logout', {
+            template: '<logout></logout>',
+            
         })
         .otherwise('/home')
 });
