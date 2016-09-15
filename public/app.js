@@ -19,13 +19,16 @@ app.config(function($routeProvider) {
             }
         })
         .when('/userpref', {
-            template: '<edit-user-pref></edit-user-pref>',
+            template: '<edit-user-pref user-preferences="$resolve.userPreferences" ></edit-user-pref>',
             resolve: {
-                myAuth: function(auth) {
-                    return auth.$requireAuth();
-                },
-                userPreferences: function(fbRef, $firebaseObject) {
-
+             //   myAuth: function(auth) {
+             //       return auth.$requireAuth();
+             //   },
+                userPreferences: function(fbRef, $firebaseObject, auth) {
+                    return auth.$requireAuth().then( function(){
+                         return $firebaseObject(fbRef.getPreferencesRef()).$loaded();
+                    }) 
+                   
                 }
             }
         })
