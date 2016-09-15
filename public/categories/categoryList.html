@@ -1,0 +1,19 @@
+<nav></nav>
+<h1>Categories 2</h1>
+
+<div >
+    <h1>List of actions</h1>
+    <ul>
+    <li ng-repeat="category in $ctrl.categories">
+        <div>
+            <em>Map ID: {{category.Map_ID}}</em>
+            <ul>
+            <li>Restoration action: {{category.Action}}</li>
+            <li>Area: {{category.Acres}} ac</li>
+            <li>Polygon Source: {{category.Polygon_Source}}</li>
+            </ul>
+            <br> 
+        </div>
+        </li> 
+    </ul>
+</div>
