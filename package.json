@@ -4,7 +4,7 @@
   "description": "pluralsight test",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -c-1 -p 8060"
+    "start": "http-server -c-1 -p 8070"
   },
   "keywords": [],
   "author": "me",
